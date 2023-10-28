@@ -1,0 +1,27 @@
+.banner img {
+    width: 100%;
+}
+
+//2 nút prev, next nó nằm bên cạnh nên làm cho chiều ngang bị dài ra(fix)
+
+/* Đặt vị trí của nút prev và next ở dưới slider */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    bottom: 20px;
+    /* Điều chỉnh khoảng cách từ dưới slider */
+}
+
+
+/* Điều chỉnh kiểu dáng của nút prev và next */
+
+.slick-prev {
+    left: 20px;
+    /* Điều chỉnh khoảng cách từ bên trái */
+}
+
+.slick-next {
+    right: 20px;
+    /* Điều chỉnh khoảng cách từ bên phải */
+}

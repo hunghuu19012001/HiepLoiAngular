@@ -9,7 +9,6 @@ export class MainComponent {
   images = ['assets/images/banner.jpg', 'assets/images/banner1.jpg', 'assets/images/banner2.jpg', 'assets/images/banner3.jpg'];
   currentIndex = 0;
 
-  // @ViewChild('slickModal') slickModal: SlickCarouselComponent; // Reference to the ngx-slick-carousel
 
 
   ngOnInit() {
@@ -30,8 +29,15 @@ export class MainComponent {
     {img: 'assets/images/xe/sh.png'},
     {img: 'assets/images/xe/vario.png'},
     {img: 'assets/images/xe/future.png'},
+    {img: 'assets/images/xe/sh350i.png'},
+    {img: 'assets/images/xe/air blade.png'}
  ];
-slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
+slideConfig = { slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+
+};
 addSlide() {
   this.slides.push({ img: 'http://placehold.it/350x150/777777' });
 }
