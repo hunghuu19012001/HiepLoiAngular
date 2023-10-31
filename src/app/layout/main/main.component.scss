@@ -1,26 +1,103 @@
+.head-product-homepage {
+    position: relative;
+    padding: 0;
+    margin: 56px 0 0;
+    width: 100%;
+}
+
+.head-homepage {
+    display: flex;
+    width: 400px;
+    margin-left: 113px;
+}
+
+.col-line {
+    width: 5px;
+    height: 40px;
+    background-color: #c00;
+    margin-top: 4px;
+}
+
+.homepage-title {
+    width: auto;
+    display: inline-block;
+    font-size: 45px;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    margin: 0;
+}
+
+.head-homepage-right {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    //margin-top: 52px;
+}
+
+.head-homepage-right button {
+    color: rgb(204, 0, 0);
+    border-color: rgb(204, 0, 0);
+    color: #707070;
+    border: 1px solid #707070;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-left: 24px;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.head-homepage-right button:hover {
+    border-color: rgb(204, 0, 0);
+    color: rgb(204, 0, 0);
+}
+
+//css slick////////////////////////////////
 .slick-slider {
-    width: 88%;
+    width: 80%;
     margin: auto;
     //background: rgb(14, 13, 13);
 }
 
-.slick-prev,
-.slick-next {
-    height: 60px;
-    width: 60px;
-    background-color: red !important;
-    z-index: 100000000;
-    position: relative;
-    left: 0;
-    color: red;
-}
-
+// .slick-prev,
+// .slick-next {
+//     height: 60px;
+//     width: 60px;
+//     background-color: red;
+//     z-index: 100000000;
+//     position: relative;
+//     left: 0;
+//     color: red;
+// }
 // .carousel {
 //     background-color: white;
 // }
 .slick-prev:before,
 .slick-next:before {
     color: red;
+    background-color: red;
 }
 
 

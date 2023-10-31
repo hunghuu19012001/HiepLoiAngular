@@ -6,24 +6,12 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  images = ['assets/images/banner.jpg', 'assets/images/banner1.jpg', 'assets/images/banner2.jpg', 'assets/images/banner3.jpg'];
-  currentIndex = 0;
+  ngOnInit() {}
 
 
-
-  ngOnInit() {
-    this.startBannerRotation();
-  }
-
-  startBannerRotation() {
-    setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    }, 2000); // Chuyển hình cứ sau 2 giây
-  }
-
-
-
-  slides = [
+// slides products
+activeCarousel =1; // chỉ định carousel hiển thị
+  slides1 = [
     {img: 'assets/images/xe/wave.png'},
     {img: 'assets/images/xe/lead.png'},
     {img: 'assets/images/xe/sh.png'},
@@ -32,18 +20,34 @@ export class MainComponent {
     {img: 'assets/images/xe/sh350i.png'},
     {img: 'assets/images/xe/air blade.png'}
  ];
-slideConfig = { slidesToShow: 4,
+ slides2 = [
+  {img: 'assets/images/xedien/xedien1.png'},
+  {img: 'assets/images/xedien/xedien2.png'},
+  {img: 'assets/images/xedien/xedien3.png'},
+  {img: 'assets/images/xedien/xedien4.jpg'},
+  {img: 'assets/images/xedien/xedien5.png'},
+  {img: 'assets/images/xedien/xedien6.png'},
+  {img: 'assets/images/xedien/xedien7.png'},
+
+
+ ]
+
+slide1Config = { slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
 
 };
-addSlide() {
-  this.slides.push({ img: 'http://placehold.it/350x150/777777' });
+slide2Config = { slidesToShow:4,
+slidesToScroll:1,
+autoplay: true,
+autoplaySpeed: 3000,};
+
+showCarousel(carouselNumber : number){
+  this.activeCarousel = carouselNumber;
 }
-removeSlide() {
-  this.slides.length = this.slides.length - 1;
-}
+
+
 slickInit(e: any) {
   console.log('slick initialized');
 }

@@ -17,6 +17,7 @@ export class BannerComponent {
 slideConfig = { slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
+  dots:true,
   autoplaySpeed: 2000,
 
 
@@ -40,4 +41,5 @@ beforeChange(e: any) {
   console.log('beforeChange');
 }
 constructor() {}
+
 }

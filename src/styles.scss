@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+/* css nút slick (file ưu tiên sẽ không bị ghi đè bởi những css khác. vậy nên những gì important mới code here) */
+
+
+/* CSS slides */
+
+
+/* product slides*/
+
+.product-carousel {
+    .slick-next:before,
+    .slick-prev:before {
+        font-size: 50px !important;
+    }
+    .slick-prev {
+        left: -50px !important;
+    }
+}
+
+
+/*banner slides*/
+
+// .banner-carousel {
+//     //position: relative;
+//     //text-align: center;
+//     .slick-next,
+//     .slick-prev {
+//         position: absolute;
+//         bottom: 0;
+//         text-align: center;
+//         //width: 50%;
+//         /* Đặt chiều rộng 50% để chúng nằm ở giữa dưới */
+//         //padding: 10px;
+//         /* Tùy chỉnh khoảng cách giữa nút và carousel */
+//         //margin-top: 290px;
+//     }
+//     .slick-prev {
+//         left: 860px;
+//         top: 565px;
+//     }
+//     .slick-next {
+//         right: 860px;
+//         top: 565px;
+//     }
+// }
+.banner-carousel {
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+        position: relative !important;
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: red !important;
+}

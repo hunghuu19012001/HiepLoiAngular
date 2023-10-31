@@ -10,13 +10,40 @@
 
 </div> -->
 
+<div class="product-homepage">
+    <div class="head-product-homepage">
+        <div class="head-homepage">
+            <div class="col-line"></div>
+            <h3 class="homepage-title">Sản phẩm</h3>
+        </div>
+        <div class="head-homepage-right">
+            <button (click)="showCarousel(1)">Xe Máy</button>
+            <button (click)="showCarousel(2)">Xe Điện</button>
 
-<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
     </div>
 
-</ngx-slick-carousel>
+
+    <!--slide -->
+    <!-- xe máy -->
+    <div *ngIf="activeCarousel === 1">
+        <ngx-slick-carousel class="product-carousel" #slickModal="slick-carousel" [config]="slide1Config" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of slides1" class="slide">
+                <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+        </ngx-slick-carousel>
+    </div>
+    <!-- xe điện -->
+    <div *ngIf="activeCarousel === 2">
+        <ngx-slick-carousel class="product-carousel" #slickModal="slick-carousel" [config]="slide2Config" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of slides2" class="slide">
+                <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+        </ngx-slick-carousel>
+    </div>
+</div>
+
+
 <!-- <button (click)="addSlide()">Add</button>
 <button (click)="removeSlide()">Remove</button>
 <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
